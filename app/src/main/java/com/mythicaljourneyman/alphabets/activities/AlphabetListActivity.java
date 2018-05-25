@@ -1,6 +1,7 @@
 package com.mythicaljourneyman.alphabets.activities;
 
 import android.databinding.DataBindingUtil;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
@@ -10,7 +11,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 import com.mythicaljourneyman.alphabets.R;
 import com.mythicaljourneyman.alphabets.databinding.ActivityAlphabetListBinding;
@@ -38,6 +38,11 @@ public class AlphabetListActivity extends AppCompatActivity {
 
     }
 
+    private void playClick() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.click);
+        mediaPlayer.start();
+    }
+
     class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ItemViewHolder> {
         private String[] mList;
 
@@ -60,6 +65,7 @@ public class AlphabetListActivity extends AppCompatActivity {
 //                    if (mTextToSpeech.isSpeaking()) {
 //                        mTextToSpeech.stop();
 //                    }
+                    playClick();
                     mTextToSpeech.speak(mList[position], TextToSpeech.QUEUE_FLUSH, null, "iddididiididi");
                 }
             });

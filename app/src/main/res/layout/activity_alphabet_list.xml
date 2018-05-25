@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="12dp"
         tools:context=".views.activities.AlphabetListActivity">
 
         <android.support.v7.widget.LinearLayoutCompat
@@ -16,10 +17,10 @@
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/title"
-                android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="English Alphabet"
                 android:textSize="32sp"
                 android:textStyle="bold"/>
@@ -27,8 +28,10 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="match_parent"
-            android:layout_margin="8dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:gravity="center"
             android:text="Tap on card to play sound"
             android:textColor="#666666"
             android:textSize="18sp"/>
